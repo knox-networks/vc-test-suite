@@ -2,18 +2,18 @@
   "stats": {
     "suites": 33,
     "tests": 92,
-    "passes": 11,
-    "pending": 43,
-    "failures": 38,
-    "start": "2023-11-20T20:47:11.160Z",
-    "end": "2023-11-20T20:47:11.331Z",
-    "duration": 171
+    "passes": 34,
+    "pending": 58,
+    "failures": 0,
+    "start": "2023-11-27T18:25:59.855Z",
+    "end": "2023-11-27T18:25:59.999Z",
+    "duration": 144
   },
   "tests": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 7,
+      "duration": 8,
       "currentRetry": 0,
       "err": {}
     },
@@ -22,43 +22,7 @@
       "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
       "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1",
@@ -70,166 +34,44 @@
     {
       "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
       "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 3,
+      "duration": 5,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "subsequent items can be objects that express context information",
       "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to deeply equal { image: { …(2) } }",
-        "showDiff": true,
-        "expected": {
-          "image": {
-            "@id": "schema:image",
-            "@type": "@id"
-          }
-        },
-        "operator": "deepStrictEqual",
-        "stack": "AssertionError: expected undefined to deeply equal { image: { …(2) } }\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:59:37)"
-      }
+      "err": {}
     },
     {
       "title": "MUST be a single URI",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:71:29)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
+      "err": {}
     },
     {
       "title": "MUST be a single URI (negative)",
       "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 4,
+      "duration": 3,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be one or more URIs (negative)",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 3,
+      "duration": 5,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "for Credential MUST be `VerifiableCredential` plus specific type",
@@ -243,187 +85,42 @@
       "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
       "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected { '@context': [ …(2) ], …(6) } to have property 'credentialSubject'",
-        "showDiff": false,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "stack": "AssertionError: expected { '@context': [ …(2) ], …(6) } to have property 'credentialSubject'\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:111:23)"
-      }
+      "err": {}
     },
     {
       "title": "MUST be present, may be a set of objects",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'should')\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:118:29)",
-        "message": "Cannot read properties of undefined (reading 'should')"
-      }
+      "err": {}
     },
     {
       "title": "MUST be present (negative - credentialSubject missing)",
       "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
       "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuer)",
       "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be a single URI",
@@ -435,143 +132,35 @@
     {
       "title": "MUST be a single URI (negative - not URI)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be a single URI (negative - Array)",
       "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be present (negative - missing issuanceDate)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
@@ -580,251 +169,56 @@
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'should')\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:197:26)",
-        "message": "Cannot read properties of undefined (reading 'should')"
-      }
+      "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime (negative - Array)",
       "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST be of type `VerifiablePresentation`",
       "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
       "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected false to be true",
-        "showDiff": true,
-        "actual": "false",
-        "expected": "true",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected false to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:218:59)"
-      }
+      "err": {}
     },
     {
       "title": "MAY include `verifiableCredential` and `proof`",
       "fullTitle": "Basic Documents Presentations MAY include `verifiableCredential` and `proof`",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to exist",
-        "showDiff": false,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:223:14)"
-      }
+      "err": {}
     },
     {
       "title": "`proof`, if present, MUST include `type` property (negative)",
       "fullTitle": "Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MAY omit `verifiableCredential`",
@@ -836,239 +230,97 @@
     {
       "title": "`credentialSchema` MUST provide one or more data schemas",
       "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:34:38)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to exist",
-        "showDiff": false,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:42:14)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to exist",
-        "showDiff": false,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:54:14)"
-      }
+      "err": {}
     },
     {
       "title": "value of `id` MUST be a URI identifying a schema file",
       "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:70:23)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
+      "err": {}
     },
     {
       "title": "`refreshService` MUST provide one or more refresh services",
       "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:32:38)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'type')\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:43:24)",
-        "message": "Cannot read properties of undefined (reading 'type')"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify an `id` property",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:53:24)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
+      "err": {}
     },
     {
       "title": "value of `id` MUST be a URL identifying a service endpoint",
       "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:64:24)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
+      "err": {}
     },
     {
       "title": "`evidence` MUST provide one or more evidence objects",
       "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/22-evidence.js:34:38)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'type')\n    at Context.<anonymous> (test/vc-data-model-1.0/22-evidence.js:45:28)",
-        "message": "Cannot read properties of undefined (reading 'type')"
-      }
+      "err": {}
     },
     {
       "title": "MUST include `id` and `type`",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/23-status.js:31:28)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
+      "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `id`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "MUST include `id` and `type` (negative - missing `type`)",
       "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "`termsOfUse` MUST provide one or more ToU objects",
       "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/35-tou.js:33:38)"
-      }
+      "err": {}
     },
     {
       "title": "MUST specify a `type` property with a valid value",
       "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 3,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'type')\n    at Context.<anonymous> (test/vc-data-model-1.0/35-tou.js:44:20)",
-        "message": "Cannot read properties of undefined (reading 'type')"
-      }
+      "err": {}
     },
     {
       "title": "MUST be present",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
@@ -1082,45 +334,9 @@
     {
       "title": "MUST include type property (negative - missing proof type)",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
+      "err": {}
     },
     {
       "title": "vc MUST be present in a JWT verifiable credential.",
@@ -1383,6 +599,96 @@
   ],
   "pending": [
     {
+      "title": "`credentialSchema` MUST provide one or more data schemas",
+      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URI identifying a schema file",
+      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`refreshService` MUST provide one or more refresh services",
+      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify an `id` property",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "value of `id` MUST be a URL identifying a service endpoint",
+      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`evidence` MUST provide one or more evidence objects",
+      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type`",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `id`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include `id` and `type` (negative - missing `type`)",
+      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`termsOfUse` MUST provide one or more ToU objects",
+      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST specify a `type` property with a valid value",
+      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "vc MUST be present in a JWT verifiable credential.",
       "fullTitle": "JWT (optional) A verifiable credential ... vc MUST be present in a JWT verifiable credential.",
       "currentRetry": 0,
@@ -1641,1048 +947,19 @@
       "err": {}
     }
   ],
-  "failures": [
-    {
-      "title": "MUST be one or more URIs (negative)",
-      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
-      "duration": 4,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "subsequent items can be objects that express context information",
-      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to deeply equal { image: { …(2) } }",
-        "showDiff": true,
-        "expected": {
-          "image": {
-            "@id": "schema:image",
-            "@type": "@id"
-          }
-        },
-        "operator": "deepStrictEqual",
-        "stack": "AssertionError: expected undefined to deeply equal { image: { …(2) } }\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:59:37)"
-      }
-    },
-    {
-      "title": "MUST be a single URI",
-      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:71:29)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
-    },
-    {
-      "title": "MUST be a single URI (negative)",
-      "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be one or more URIs (negative)",
-      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
-      "duration": 4,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be present",
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected { '@context': [ …(2) ], …(6) } to have property 'credentialSubject'",
-        "showDiff": false,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "stack": "AssertionError: expected { '@context': [ …(2) ], …(6) } to have property 'credentialSubject'\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:111:23)"
-      }
-    },
-    {
-      "title": "MUST be present, may be a set of objects",
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'should')\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:118:29)",
-        "message": "Cannot read properties of undefined (reading 'should')"
-      }
-    },
-    {
-      "title": "MUST be present (negative - credentialSubject missing)",
-      "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
-      "duration": 4,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be present (negative - missing issuer)",
-      "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be a single URI (negative - not URI)",
-      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be a single URI (negative - Array)",
-      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be present (negative - missing issuanceDate)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be an RFC3339 datetime",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'should')\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:197:26)",
-        "message": "Cannot read properties of undefined (reading 'should')"
-      }
-    },
-    {
-      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be an RFC3339 datetime (negative - Array)",
-      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST be of type `VerifiablePresentation`",
-      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
-      "duration": 4,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected false to be true",
-        "showDiff": true,
-        "actual": "false",
-        "expected": "true",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected false to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:218:59)"
-      }
-    },
-    {
-      "title": "MAY include `verifiableCredential` and `proof`",
-      "fullTitle": "Basic Documents Presentations MAY include `verifiableCredential` and `proof`",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to exist",
-        "showDiff": false,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at Context.<anonymous> (test/vc-data-model-1.0/10-basic.js:223:14)"
-      }
-    },
-    {
-      "title": "`proof`, if present, MUST include `type` property (negative)",
-      "fullTitle": "Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "`credentialSchema` MUST provide one or more data schemas",
-      "fullTitle": "Credential Schema (optional) `credentialSchema` MUST provide one or more data schemas",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:34:38)"
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify a `type` property with a valid value",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to exist",
-        "showDiff": false,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:42:14)"
-      }
-    },
-    {
-      "title": "MUST specify an `id` property",
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... MUST specify an `id` property",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to exist",
-        "showDiff": false,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to exist\n    at should.exist (node_modules/chai/lib/chai/interface/should.js:144:34)\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:54:14)"
-      }
-    },
-    {
-      "title": "value of `id` MUST be a URI identifying a schema file",
-      "fullTitle": "Credential Schema (optional) each object within `credentialSchema`... value of `id` MUST be a URI identifying a schema file",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/20-schema.js:70:23)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
-    },
-    {
-      "title": "`refreshService` MUST provide one or more refresh services",
-      "fullTitle": "Refresh Service (optional) `refreshService` MUST provide one or more refresh services",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:32:38)"
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify a `type` property with a valid value",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'type')\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:43:24)",
-        "message": "Cannot read properties of undefined (reading 'type')"
-      }
-    },
-    {
-      "title": "MUST specify an `id` property",
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... MUST specify an `id` property",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:53:24)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
-    },
-    {
-      "title": "value of `id` MUST be a URL identifying a service endpoint",
-      "fullTitle": "Refresh Service (optional) each object within `refreshService`... value of `id` MUST be a URL identifying a service endpoint",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/21-refresh.js:64:24)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
-    },
-    {
-      "title": "`evidence` MUST provide one or more evidence objects",
-      "fullTitle": "Evidence (optional) `evidence` MUST provide one or more evidence objects",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/22-evidence.js:34:38)"
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Evidence (optional) each object within `evidence`... MUST specify a `type` property with a valid value",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'type')\n    at Context.<anonymous> (test/vc-data-model-1.0/22-evidence.js:45:28)",
-        "message": "Cannot read properties of undefined (reading 'type')"
-      }
-    },
-    {
-      "title": "MUST include `id` and `type`",
-      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type`",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Context.<anonymous> (test/vc-data-model-1.0/23-status.js:31:28)",
-        "message": "Cannot read properties of undefined (reading 'id')"
-      }
-    },
-    {
-      "title": "MUST include `id` and `type` (negative - missing `id`)",
-      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `id`)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "MUST include `id` and `type` (negative - missing `type`)",
-      "fullTitle": "Credential Status (optional) `credentialStatus` property MUST include `id` and `type` (negative - missing `type`)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    },
-    {
-      "title": "`termsOfUse` MUST provide one or more ToU objects",
-      "fullTitle": "Terms of Use (optional) `termsOfUse` MUST provide one or more ToU objects",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected undefined to be true",
-        "showDiff": true,
-        "expected": true,
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected undefined to be true\n    at Context.<anonymous> (test/vc-data-model-1.0/35-tou.js:33:38)"
-      }
-    },
-    {
-      "title": "MUST specify a `type` property with a valid value",
-      "fullTitle": "Terms of Use (optional) each object within `termsOfUse`... MUST specify a `type` property with a valid value",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'type')\n    at Context.<anonymous> (test/vc-data-model-1.0/35-tou.js:44:20)",
-        "message": "Cannot read properties of undefined (reading 'type')"
-      }
-    },
-    {
-      "title": "MUST include type property (negative - missing proof type)",
-      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }",
-        "showDiff": true,
-        "actual": {
-          "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://www.w3.org/2018/credentials/examples/v1"
-          ],
-          "id": "https://bank.com/credentials/83627465",
-          "issuanceDate": "2022-04-11T16:36:24Z",
-          "issuer": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg",
-          "proof": {
-            "created": "2022-04-11T16:36:24Z",
-            "proofPurpose": "assertionMethod",
-            "proofValue": "z4xTXcWHhZY8oXCXTKSw3N9qmRKjQAUUVbNnQz1FqKCAYiGieYohBRcSKGK9YcBuKqyqzjbaohmtMZBAenC9huBJ",
-            "type": "Ed25519Signature2020",
-            "verificationMethod": "did:knox:z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg#z9j11k9soh9kJ1vD9pYR87ZhD7zE1U7ZA3XVSkWjY4YLg"
-          },
-          "subject": {
-            "account": "000-000-204",
-            "address": "19 Knox St, Toronto, ON",
-            "birthDate": "1981-04-01",
-            "branch": "C09",
-            "country": "Canada",
-            "familyName": "Kim",
-            "gender": "Male",
-            "givenName": "Francis",
-            "id": "did:knox:z6MkgLDqhuPFrED5w8PuMjKk1pMMamH11PnmES51Pp348c81",
-            "phone": "416-984-1234",
-            "type": ["BankCard"]
-          },
-          "type": ["VerifiableCredential", "BankCard"]
-        },
-        "expected": "Error",
-        "operator": "strictEqual",
-        "stack": "AssertionError: expected promise to be rejected with 'Error' but it was fulfilled with { '@context': [ …(2) ], …(6) }"
-      }
-    }
-  ],
+  "failures": [],
   "passes": [
     {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents @context MUST be one or more URIs",
-      "duration": 7,
+      "duration": 8,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents @context MUST be one or more URIs (negative)",
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
@@ -2694,9 +971,44 @@
       "err": {}
     },
     {
+      "title": "first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "fullTitle": "Basic Documents @context first value MUST be https://www.w3.org/2018/credentials/v1 (negative)",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "subsequent items can be objects that express context information",
+      "fullTitle": "Basic Documents @context subsequent items can be objects that express context information",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative)",
+      "fullTitle": "Basic Documents `id` properties MUST be a single URI (negative)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "MUST be one or more URIs",
       "fullTitle": "Basic Documents `type` properties MUST be one or more URIs",
-      "duration": 4,
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be one or more URIs (negative)",
+      "fullTitle": "Basic Documents `type` properties MUST be one or more URIs (negative)",
+      "duration": 5,
       "currentRetry": 0,
       "err": {}
     },
@@ -2708,9 +1020,44 @@
       "err": {}
     },
     {
+      "title": "for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "fullTitle": "Basic Documents `type` properties for Credential MUST be `VerifiableCredential` plus specific type (negative)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present, may be a set of objects",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present, may be a set of objects",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - credentialSubject missing)",
+      "fullTitle": "Basic Documents `credentialSubject` property MUST be present (negative - credentialSubject missing)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuer` property MUST be present",
-      "duration": 3,
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing issuer)",
+      "fullTitle": "Basic Documents `issuer` property MUST be present (negative - missing issuer)",
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
@@ -2722,16 +1069,93 @@
       "err": {}
     },
     {
+      "title": "MUST be a single URI (negative - not URI)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - not URI)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be a single URI (negative - Array)",
+      "fullTitle": "Basic Documents `issuer` property MUST be a single URI (negative - Array)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "MUST be present",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be present",
-      "duration": 3,
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be present (negative - missing issuanceDate)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be present (negative - missing issuanceDate)",
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST be an RFC3339 datetime",
       "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
       "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `issuanceDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an RFC3339 datetime",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - RFC3339)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - RFC3339)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be an RFC3339 datetime (negative - Array)",
+      "fullTitle": "Basic Documents `expirationDate` property MUST be an RFC3339 datetime (negative - Array)",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST be of type `VerifiablePresentation`",
+      "fullTitle": "Basic Documents Presentations MUST be of type `VerifiablePresentation`",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MAY include `verifiableCredential` and `proof`",
+      "fullTitle": "Basic Documents Presentations MAY include `verifiableCredential` and `proof`",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "`proof`, if present, MUST include `type` property (negative)",
+      "fullTitle": "Basic Documents Presentations `proof`, if present, MUST include `type` property (negative)",
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
@@ -2745,13 +1169,20 @@
     {
       "title": "MUST be present",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST be present",
-      "duration": 3,
+      "duration": 4,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "MUST include specific method using the type property",
       "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include specific method using the type property",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "MUST include type property (negative - missing proof type)",
+      "fullTitle": "Linked Data Proofs (optional) `proof` property MUST include type property (negative - missing proof type)",
       "duration": 4,
       "currentRetry": 0,
       "err": {}
